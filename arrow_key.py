@@ -1,4 +1,24 @@
-#1: Have the user type into the terminal with arrow keys.
+import keyboard
+
+#1
+print("Please type in any arrow key.")
+#2
+def detect_key_input(event):
+    if event.name == "down":
+        print("You typed Down Key")
+    elif event.name == "up":
+        print("You typed Up Key")
+    elif event.name == "left":
+        print("You typed Left Key")
+    elif event.name == "right":
+        print("You typed Right Key")
+
+keyboard.on_press(detect_key_input)
+
+while True:
+    pass
+
+#1: Have the user type into the terminal with arrow keys. Check
 #2: Find out which arrow key the user typed.
 #3: Each different arrow key will result to a different text response from the terminal.
 #4: If the Arrow key is UP, the terminal will print "UP", if LEFT key, print "LEFT"
@@ -11,3 +31,18 @@
 #9:The recording will stop once the user presses 'r' again to escape the "record" mode.
 #10:Make a message that clearly shows the program is about to "play" the "recorded" messages.
 #11:The user can then press p key to print every recorded key onto the terminal.
+
+
+#shot_pressed = 0
+
+#def on_press_reaction(event):
+#    global shot_pressed
+#    if event.name == "down":
+#        shot_pressed += 1
+#        print("shot_pressed %d times"%shot_pressed)
+
+
+#keyboard.on_press(on_press_reaction)
+
+#while True:
+#    pass
