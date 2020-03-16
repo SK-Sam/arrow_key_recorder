@@ -1,8 +1,9 @@
 import keyboard
+import sys
 
 #1
-print("Please type in any arrow key.")
-#2
+print("Please type in any arrow key. Press 'q' to stop")
+#2 #3 #4
 def detect_key_input(event):
     if event.name == "down":
         print("You typed Down Key")
@@ -12,6 +13,9 @@ def detect_key_input(event):
         print("You typed Left Key")
     elif event.name == "right":
         print("You typed Right Key")
+    #5
+    elif event.name == "q":
+        sys.exit()
 
 keyboard.on_press(detect_key_input)
 
